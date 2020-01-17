@@ -1,0 +1,15 @@
+
+.photo[data-v-21e001e5]{
+    height: 100%;
+    width: 100%;
+}
+
+
+.photo-item[data-v-626df39e]{
+    display: inline-block;
+    width: 33%;
+    /*border: 5px solid whitesmoke;*/
+}
+
+body{background-color:salmon}
+
