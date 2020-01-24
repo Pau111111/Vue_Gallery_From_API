@@ -17,6 +17,17 @@ module.exports = {
     devServer: {
         port: 6969
     },
+    //Es para que no falle al usar la opción a continuación en el fichero 'main.js'
+    // new Vue({
+    //     el: '#app',
+    //     components: { App },
+    //     template: '<app/>'
+    //   })
+    resolve: {
+        alias: {
+          vue: 'vue/dist/vue.js'
+        }
+      },
     //This will contain the files that are not JS that you want to autoimport and compile into your project
     module: {
         rules: [
