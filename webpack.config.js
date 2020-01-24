@@ -1,12 +1,13 @@
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
+const polyfill = require("babel-polyfill");
 
 //const path = require('path');
 
 module.exports = {
     //Path of the file to convert
-    entry: './src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
 
     //Path to the converted file
     output: {

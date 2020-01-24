@@ -38,12 +38,12 @@ export default {
         //this.addPhotos();
     },
     methods: {
-        // async intersected(){
+        async intersected(){
 
-        //     axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${this.page++}`)
-        //         .then(res => this.photos = [...this.photos, ...res.data], console.log("Request done!")) //this.photos = [...this.photos, res.data]
-        //         .catch(err => console.log(err));
-        // },
+            axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${this.page++}`)
+                .then(res => this.photos = [...this.photos, ...res.data], console.log("Request done!")) //this.photos = [...this.photos, res.data]
+                .catch(err => console.log(err));
+        },
         addPhotos(){
             console.log("addPhotos()");
             var result = "";
