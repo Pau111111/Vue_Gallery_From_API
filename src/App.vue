@@ -26,7 +26,7 @@ export default {
     created(){
         console.log("created()");
            axios.get('https://jsonplaceholder.typicode.com/photos?_limit=5')
-            .then(res => this.photos = res.data, this.addPhotos())
+            .then(res => this.photos = res.data, this.addPhotos())//callback
             .catch(err => console.log(err));
             //console.log(this.photos);
     },
