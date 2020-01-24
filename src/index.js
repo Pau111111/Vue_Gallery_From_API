@@ -7,14 +7,14 @@ Vue.config.productionTip = false;
 //
 // var photo = new Photo(1,2,3,4);
 
-// new Vue({
-//     el: '#app',
-//     render: h => h(App)
-// }).$mount('#app');
+new Vue({
+    //el: '#app',
+    render: h => h(App)
+}).$mount('#app');
 
 /* eslint-disable no-new */
-new Vue({
-    el: '#app',
-    components: { App },
-    template: '<App/>'
-  })
+// new Vue({
+//     el: '#app',
+//     components: { App },
+//     template: '<App/>'
+//   })

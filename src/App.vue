@@ -3,7 +3,8 @@
         <Header/>
         <p>LOAD IMAGES FROM API</p>
         <Photos v-bind:photos="photos"/>
-        <!-- <Observer v-on:intersect="intersected"/> -->
+        <!-- Observer will send a petiton to render the page if the window is on bottom, I think... -->
+        <Observer v-on:intersect="intersected"/>
     </div>
 </template>
 <script>
@@ -27,20 +28,19 @@ export default {
         }
     },
     //This is called once all the app is created
-    created(){
-        console.log("created()");
-           axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=5&_page=${this.page}`)
-            .then(res => this.photos = res.data, this.addPhotos())//callback
-            .catch(err => console.log(err));
-            //console.log(this.photos);
-    },
+    // created(){
+    //     console.log("created()");
+    //        axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=5&_page=${this.page}`)
+    //         .then(res => this.photos = res.data) //, this.addPhotos()
+    //         .catch(err => console.log(err));
+    //         //console.log(this.photos);
+    // },
     mounted (){
         //this.addPhotos();
     },
     methods: {
         async intersected(){
-
-            axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${this.page++}`)
+            axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=5&_page=${this.page++}`)
                 .then(res => this.photos = [...this.photos, ...res.data], console.log("Request done!")) //this.photos = [...this.photos, res.data]
                 .catch(err => console.log(err));
         },
