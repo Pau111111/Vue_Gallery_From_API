@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './App.vue';
+import App from './AppV1.vue';
 //import Photo from './assets/classes/Photo';
 import './assets/scss/style.scss';
 
